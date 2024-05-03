@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="x-icon" href="https://as1.ftcdn.net/v2/jpg/03/43/09/34/1000_F_343093446_vSyNweEIQIF2l62URn2kjvnzHSb4zVil.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Navigation Menu</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+        <div class="logo"><a href="#">Environment</a></div>
+        <ul class="links">
+            <li><a href="hero">HOME</a></li>
+            <li><a href="about">ABOUT</a></li>
+            <li><a href="services">SERVICES</a></li>
+            <li><a href="contacts">CONTACTS</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="hero">HOME</a></li>
+            <li><a href="about">ABOUT</a></li>
+            <li><a href="services">SERVICES</a></li>
+            <li><a href="contacts">CONTACTS</a></li>
+            <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>MOUNTAINS</h1>
+            <p>“Mountains teach that not everything in this world can be rationally explained.”---Aleksander Lwow </p>
+    </main>
+    <script>
+    const toggleBtn=document.querySelector('.toggle_btn') 
+    const toggleBtnIcon=document.querySelector('.toggle_btn i') 
+    const dropdown_menu=document.querySelector('.dropdown_menu') 
+
+    toggleBtn.onclick=function(){
+        dropdown_menu.classList.toggle('open')
+        const isOpen=dropdown_menu.classList.contains('open')
+
+        toggleBtnIcon.classList=isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+    </script>
+</body>
+</html>
